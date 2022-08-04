@@ -3,17 +3,27 @@ using System;
 public class TwistedSum {
 
     public static long Solution(long n) {
-        long solution = 0;
+        long count = 0;
 
-        for (long i = 1; i <= n; i++) {
-            long j = i;
+        for (long i = 1; i < n + 1; i++) {
             
-            while (j != 0) {
-                solution += j % 10;
-                j /= 10;
+            if (i > 9) {
+                string digits = i.ToString();
+
+                for (int j = 0; j < digits.Length; j++) {
+                    count += digits[j] - '0';
+                    Console.WriteLine(digits[j] - '0');
+                }
+
             }
+
+            else {
+                count += i;
+                Console.WriteLine(i);
+            }
+
         }
-        Console.Write(solution);
-        return solution;
+        Console.WriteLine(count);
+        return count;
     }
 }
