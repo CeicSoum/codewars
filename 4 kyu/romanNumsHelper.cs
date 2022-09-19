@@ -57,7 +57,7 @@ public class RomanNumerals {
 
       }
       
-      Console.WriteLine(result);
-      return result;
+       Console.WriteLine(result);
+       return result;
    }
 }
