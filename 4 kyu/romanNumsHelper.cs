@@ -6,8 +6,6 @@ public class RomanNumerals {
 
    public static string ToRoman(int n) {
       string digits = n.ToString();
-      
-      string digits = n.ToString();
       string[] first = { "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
       string[] second = { "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" };
       string[] third = { "", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM" };
