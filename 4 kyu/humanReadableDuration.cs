@@ -56,9 +56,15 @@ public class HumanTimeFormat {
          time = time.Replace("del", "");
          time = time.Replace(", 0 minutes", "");
          time = time.Replace(", 0 hours", "");
+         
          if (!time.Contains("second") && !time.Contains("seconds")) {
             time = time.Replace("hours,", "hours and");
          }
+         
+         if (!time.Contains("second") && !time.Contains("seconds") && !time.Contains("hour") && !time.Contains("hours")) {
+            time = time.Replace("days,", "days and");
+         }
+         
          Console.WriteLine(time);
          return time;
       }
